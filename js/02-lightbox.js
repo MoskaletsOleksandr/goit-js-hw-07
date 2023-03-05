@@ -36,7 +36,10 @@ const handleGalleryItemClick = (event) => {
     return;
   }
 
-  lightbox = new SimpleLightbox('.gallery a');
+  lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionsDelay: 250,
+  });
 };
 
 galleryContainerEl.addEventListener('click', handleGalleryItemClick);
